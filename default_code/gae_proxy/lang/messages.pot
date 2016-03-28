@@ -1,0 +1,590 @@
+# Translations template for PROJECT.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-01-13 10:08+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.1.1\n"
+
+#: web_ui/advanced.html:2
+msgid "Scan Settings"
+msgstr ""
+
+#: web_ui/advanced.html:3
+msgid "Scan Log"
+msgstr ""
+
+#: web_ui/advanced.html:4
+msgid "Import IP"
+msgstr ""
+
+#: web_ui/advanced.html:5
+msgid "Export IP"
+msgstr ""
+
+#: web_ui/advanced.html:6
+msgid "Check IP"
+msgstr ""
+
+#: web_ui/advanced.html:13 web_ui/menu.yaml:17
+msgid "Advanced"
+msgstr ""
+
+#: web_ui/check_ip.html:3 web_ui/status.html:3
+msgid "Your browser is obsolete. Partial functionality will not be available."
+msgstr ""
+
+#: web_ui/check_ip.html:4 web_ui/status.html:4
+msgid "The latest Chrome browser is recommended."
+msgstr ""
+
+#: web_ui/check_ip.html:7 web_ui/menu.yaml:5 web_ui/status.html:11
+msgid "Status"
+msgstr ""
+
+#: web_ui/check_ip.html:11 web_ui/status.html:15 web_ui/status.html:63
+#: web_ui/status.html:91 web_ui/status.html:115
+msgid "Property"
+msgstr ""
+
+#: web_ui/check_ip.html:12 web_ui/status.html:16 web_ui/status.html:64
+#: web_ui/status.html:92 web_ui/status.html:116
+msgid "Value"
+msgstr ""
+
+#: web_ui/check_ip.html:17
+msgid "All IP Number"
+msgstr ""
+
+#: web_ui/check_ip.html:21
+msgid "Left Number"
+msgstr ""
+
+#: web_ui/check_ip.html:25
+msgid "Good IP Number"
+msgstr ""
+
+#: web_ui/check_ip.html:33 web_ui/check_ip.html:79 web_ui/check_ip.html:93
+#: web_ui/export_ip.html:23 web_ui/import_ip.html:12
+msgid "Run"
+msgstr ""
+
+#: web_ui/check_ip.html:71 web_ui/check_ip.html:108 web_ui/check_ip.html:122
+msgid "No response from GAEProxy process. It might have already exited."
+msgstr ""
+
+#: web_ui/check_ip.html:86
+msgid "Stop"
+msgstr ""
+
+#: web_ui/config.html:7
+msgid "Public appids used by default"
+msgstr ""
+
+#: web_ui/config.html:10
+msgid "The public appids are disabled to access videos or download files."
+msgstr ""
+
+#: web_ui/config.html:11 web_ui/deploy.html:14
+msgid "How to apply"
+msgstr ""
+
+#: web_ui/config.html:16
+msgid "Attention: inaccessable before appids are deployed."
+msgstr ""
+
+#: web_ui/config.html:23
+msgid "Advanced options"
+msgstr ""
+
+#: web_ui/config.html:29
+msgid "Enable IPv6(CERNet only)"
+msgstr ""
+
+#: web_ui/config.html:37
+msgid "LAN proxy(Generally not needed)"
+msgstr ""
+
+#: web_ui/config.html:37 web_ui/scan_setting.html:5 web_ui/status.html:33
+#: web_ui/status.html:49
+msgid "Help"
+msgstr ""
+
+#: web_ui/config.html:46
+msgid "Proxy type"
+msgstr ""
+
+#: web_ui/config.html:58
+msgid "Proxy IP address or domain name"
+msgstr ""
+
+#: web_ui/config.html:66
+msgid "Port"
+msgstr ""
+
+#: web_ui/config.html:74
+msgid "User name"
+msgstr ""
+
+#: web_ui/config.html:82
+msgid "Password"
+msgstr ""
+
+#: web_ui/config.html:92
+msgid "Save"
+msgstr ""
+
+#: web_ui/config.html:99
+msgid "Advanced tricks:"
+msgstr ""
+
+#: web_ui/config.html:99
+msgid "By the configuration file"
+msgstr ""
+
+#: web_ui/config.html:104
+msgid "Configure GAEProxy"
+msgstr ""
+
+#: web_ui/config.html:185
+msgid "Failed reading the settings."
+msgstr ""
+
+#: web_ui/config.html:202
+msgid "Wait for checking setting..."
+msgstr ""
+
+#: web_ui/config.html:230 web_ui/scan_setting.html:59
+#: web_ui/scan_setting.html:107 web_ui/scan_setting.html:129
+msgid "Settings saved successfully"
+msgstr ""
+
+#: web_ui/config.html:233
+msgid "AppID invalid:"
+msgstr ""
+
+#: web_ui/config.html:233
+msgid ", deploy appid before using."
+msgstr ""
+
+#: web_ui/config.html:235
+msgid "Enable IPv6 failed. Be sure your network support IPv6."
+msgstr ""
+
+#: web_ui/config.html:237 web_ui/config.html:243
+msgid "Failed saving settings"
+msgstr ""
+
+#: web_ui/deploy.html:1
+msgid "Deploy XX-Net onto GAE"
+msgstr ""
+
+#: web_ui/deploy.html:3
+msgid "Current status"
+msgstr ""
+
+#: web_ui/deploy.html:3 web_ui/deploy.html:164
+msgid "idle"
+msgstr ""
+
+#: web_ui/deploy.html:6
+msgid "Authorization"
+msgstr ""
+
+#: web_ui/deploy.html:7 web_ui/menu.yaml:21
+msgid "Log"
+msgstr ""
+
+#: web_ui/deploy.html:17
+msgid "Delimit multiple appids with |"
+msgstr ""
+
+#: web_ui/deploy.html:35
+msgid "If the 2-step verification is in-use, please use your exclusive password."
+msgstr ""
+
+#: web_ui/deploy.html:35 web_ui/deploy.html:36
+msgid "Configure now"
+msgstr ""
+
+#: web_ui/deploy.html:36
+msgid ""
+"If the 2-step verification is NOT in-use, please enable the less secure "
+"apps."
+msgstr ""
+
+#: web_ui/deploy.html:37
+msgid "Details"
+msgstr ""
+
+#: web_ui/deploy.html:43 web_ui/deploy.html:195 web_ui/deploy.html:205
+msgid "Start to deploy"
+msgstr ""
+
+#: web_ui/deploy.html:47
+msgid "Redploy the server if XX-Net version is prior to 1.13.6."
+msgstr ""
+
+#: web_ui/deploy.html:144 web_ui/deploy.html:152 web_ui/deploy.html:158
+#: web_ui/deploy.html:164 web_ui/deploy.html:167 web_ui/deploy.html:174
+#: web_ui/deploy.html:179 web_ui/deploy.html:243 web_ui/deploy.html:246
+msgid "Current status: "
+msgstr ""
+
+#: web_ui/deploy.html:144
+msgid "XX-Net was reset."
+msgstr ""
+
+#: web_ui/deploy.html:152 web_ui/deploy.html:174
+msgid "Deployment completed. "
+msgstr ""
+
+#: web_ui/deploy.html:152
+msgid "Please go to "
+msgstr ""
+
+#: web_ui/deploy.html:152
+msgid "the configuration page "
+msgstr ""
+
+#: web_ui/deploy.html:152
+msgid "to set AppID to enable them."
+msgstr ""
+
+#: web_ui/deploy.html:158 web_ui/deploy.html:179 web_ui/deploy.html:246
+msgid "An exception occurred. "
+msgstr ""
+
+#: web_ui/deploy.html:158 web_ui/deploy.html:179 web_ui/deploy.html:246
+msgid "The exception info: "
+msgstr ""
+
+#: web_ui/deploy.html:167
+msgid "deploying ..."
+msgstr ""
+
+#: web_ui/deploy.html:199 web_ui/deploy.html:207
+msgid "Terminate deploying"
+msgstr ""
+
+#: web_ui/deploy.html:243
+msgid "Deployment cancelled."
+msgstr ""
+
+#: web_ui/deploy.html:256
+msgid "Your AppID is either empty or invalid."
+msgstr ""
+
+#: web_ui/deploy.html:259
+msgid "Your Email address is either empty or invalid."
+msgstr ""
+
+#: web_ui/deploy.html:262
+msgid "Please fill in your account & its password."
+msgstr ""
+
+#: web_ui/export_ip.html:4
+msgid "Export format"
+msgstr ""
+
+#: web_ui/export_ip.html:8
+msgid " format"
+msgstr ""
+
+#: web_ui/export_ip.html:9
+msgid "New line delimiter"
+msgstr ""
+
+#: web_ui/export_ip.html:15
+msgid "IP address list"
+msgstr ""
+
+#: web_ui/export_ip.html:37
+msgid "Succeeded exporting "
+msgstr ""
+
+#: web_ui/export_ip.html:37
+msgid " IP addresses."
+msgstr ""
+
+#: web_ui/export_ip.html:43
+msgid "Failed exporting the IP addresses."
+msgstr ""
+
+#: web_ui/import_ip.html:4
+msgid "IP list"
+msgstr ""
+
+#: web_ui/logging.html:15
+msgid "GAEProxy Log"
+msgstr ""
+
+#: web_ui/menu.yaml:9 web_ui/status.html:59
+msgid "Configuration"
+msgstr ""
+
+#: web_ui/menu.yaml:13
+msgid "Deploy Server"
+msgstr ""
+
+#: web_ui/scan_log.html:5
+msgid "Refresh"
+msgstr ""
+
+#: web_ui/scan_log.html:20
+msgid "Failed reading the log"
+msgstr ""
+
+#: web_ui/scan_setting.html:5
+msgid "Auto-adjust scan thread count"
+msgstr ""
+
+#: web_ui/scan_setting.html:13
+msgid "Max scan thread count"
+msgstr ""
+
+#: web_ui/scan_setting.html:19
+msgid "Update"
+msgstr ""
+
+#: web_ui/scan_setting.html:24
+msgid "IP range list"
+msgstr ""
+
+#: web_ui/scan_setting.html:24
+msgid "Supporting formats"
+msgstr ""
+
+#: web_ui/scan_setting.html:32
+msgid "Submit"
+msgstr ""
+
+#: web_ui/scan_setting.html:86
+msgid "Failed reading the settings"
+msgstr ""
+
+#: web_ui/scan_setting.html:109 web_ui/scan_setting.html:131
+msgid "Unkown error occurred"
+msgstr ""
+
+#: web_ui/status.html:21
+msgid "Local Network Status"
+msgstr ""
+
+#: web_ui/status.html:25
+msgid "IP Number"
+msgstr ""
+
+#: web_ui/status.html:29
+msgid "IP Quality"
+msgstr ""
+
+#: web_ui/status.html:33
+msgid "Connection Pool"
+msgstr ""
+
+#: web_ui/status.html:37
+msgid "Browser Proxy Setting"
+msgstr ""
+
+#: web_ui/status.html:41
+msgid "CA status"
+msgstr ""
+
+#: web_ui/status.html:45
+msgid "Number of IP-Scanning Threads"
+msgstr ""
+
+#: web_ui/status.html:45
+msgid "Settings"
+msgstr ""
+
+#: web_ui/status.html:49
+msgid "Block Status"
+msgstr ""
+
+#: web_ui/status.html:53
+msgid "XX-Net Version"
+msgstr ""
+
+#: web_ui/status.html:69
+msgid "System Proxy Status"
+msgstr ""
+
+#: web_ui/status.html:73
+msgid "Listening Proxy"
+msgstr ""
+
+#: web_ui/status.html:77
+msgid "PAC URL"
+msgstr ""
+
+#: web_ui/status.html:97
+msgid "Working AppIDs"
+msgstr ""
+
+#: web_ui/status.html:101
+msgid "Out-of-quota AppIDs"
+msgstr ""
+
+#: web_ui/status.html:105
+msgid "Nonexistent AppIDs"
+msgstr ""
+
+#: web_ui/status.html:111
+msgid "System Version"
+msgstr ""
+
+#: web_ui/status.html:163 web_ui/status.html:182
+msgid "Diagnostic Info"
+msgstr ""
+
+#: web_ui/status.html:166
+msgid "Check Github issues"
+msgstr ""
+
+#: web_ui/status.html:166
+msgid " or "
+msgstr ""
+
+#: web_ui/status.html:166
+msgid " Discussions"
+msgstr ""
+
+#: web_ui/status.html:173
+msgid "Show Details"
+msgstr ""
+
+#: web_ui/status.html:185
+msgid "The Post to Github Issue needs to sign in your Github account"
+msgstr ""
+
+#: web_ui/status.html:189
+msgid "To Google Groups"
+msgstr ""
+
+#: web_ui/status.html:190
+msgid "Post to Github Issue"
+msgstr ""
+
+#: web_ui/status.html:196
+msgid "GAE Proxy Status Info"
+msgstr ""
+
+#: web_ui/status.html:305
+msgid "Disabled"
+msgstr ""
+
+#: web_ui/status.html:305
+msgid "Enabled"
+msgstr ""
+
+#: web_ui/status.html:351
+msgid ""
+"The status page is empty. Highly likely that GAEProxy failed getting "
+"started. Please follow "
+msgstr ""
+
+#: web_ui/status.html:351 web_ui/status.html:414
+msgid "guide "
+msgstr ""
+
+#: web_ui/status.html:351 web_ui/status.html:414
+msgid "to troubleshoot."
+msgstr ""
+
+#: web_ui/status.html:365
+msgid "Your local network failed. Please check your network and firewall. "
+msgstr ""
+
+#: web_ui/status.html:370
+msgid ""
+"You may want to <a "
+"href=\"./?module=gae_proxy&menu=advanced#scan_ip\">turn on IP scaner</a>."
+msgstr ""
+
+#: web_ui/status.html:372
+msgid "XX-Net is scanning IP. Please wait about half an hour."
+msgstr ""
+
+#: web_ui/status.html:379
+msgid ""
+"Public appid out of quota, Please <a href=\"https://github.com/XX-net/XX-"
+"Net/wiki/Register-Google-appid\" target=\"_blank\">deploy your own "
+"APPID</a>"
+msgstr ""
+
+#: web_ui/status.html:381
+msgid ""
+"Your appid out of quota, Please <a href=\"https://github.com/XX-net/XX-"
+"Net/wiki/Register-Google-appid\" target=\"_blank\">deploy more APPID</a>"
+msgstr ""
+
+#: web_ui/status.html:384
+msgid "No working appid. Please check. "
+msgstr ""
+
+#: web_ui/status.html:389
+msgid "Connection not established yet. "
+msgstr ""
+
+#: web_ui/status.html:393
+msgid "Please check your browser proxy setting."
+msgstr ""
+
+#: web_ui/status.html:395 web_ui/status.html:401
+msgid "Detecting..."
+msgstr ""
+
+#: web_ui/status.html:399
+msgid "Please import certificates to your browser."
+msgstr ""
+
+#: web_ui/status.html:405
+msgid ""
+"You are using public APPID. You are recommended to <a "
+"href=\"https://github.com/XX-net/XX-Net/wiki/Register-Google-appid\" "
+"target=\"_blank\">deploy your own APPID</a>"
+msgstr ""
+
+#: web_ui/status.html:408
+msgid ", Everything is OK. Welcome to the FREE Internet. "
+msgstr ""
+
+#: web_ui/status.html:414
+msgid ""
+"The status page is empty. Highly likely that XX-Net failed getting "
+"started. Please follow "
+msgstr ""
+
+#: web_ui/status.html:416
+msgid "No response from process. It might have already exited."
+msgstr ""
+
+#: web_ui/status.html:423
+msgid "You are using the public Appid."
+msgstr ""
+
+#: web_ui/status.html:446
+msgid "Auto proxy enabled at "
+msgstr ""
+
+#: web_ui/status.html:448
+msgid "Proxy enabled at "
+msgstr ""
+
+#: web_ui/status.html:450
+msgid "Proxy disabled"
+msgstr ""
+

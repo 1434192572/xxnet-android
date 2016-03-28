@@ -1,0 +1,3 @@
+title=XX-Net
+author=xxnet.dev
+orientation=landscape
