@@ -64,14 +64,6 @@ def load_xxnet():
     launcher_path = os.path.join(xxnet_path, "code", version, "launcher")
     sys.path.insert(0, launcher_path)
 
-    #add by outofmemo, fix update fail for Android
-    version_path = os.path.join(xxnet_path, "code" , "version.txt")
-    if os.path.isfile(version_path):
-        version_file = open(version_path)
-        version_name = version_file.read()
-        sys.path.insert(0, os.path.join(xxnet_path, "code", version_name, "launcher"))
-        version_file.close()
-        
     from start import main as launcher_main
     print "launcher_main"
     launcher_main()
