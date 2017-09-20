@@ -15,9 +15,12 @@ mkdir -p default_code/code/default
 cp -r XX-Net/code/default/gae_proxy XX-Net/code/default/launcher \
  XX-Net/code/default/x_tunnel XX-Net/code/default/version.txt\
  default_code/code/default/.
+
+rm -rf default_code/code/default/gae_proxy/server
 mkdir -p default_code/code/default/python27/1.0/lib
 cp -r XX-Net/code/default/python27/1.0/lib/noarch \
  default_code/code/default/python27/1.0/lib/.
+rm -rf default_code/code/default/python27/1.0/lib/noarch/OpenSSL/
 find default_code |grep "\.pyc" |xargs rm
 rm private/default.zip
 
@@ -30,6 +33,7 @@ export ANDROIDSDK=~/android-sdk-linux
 export ANDROIDNDK=~/android-ndk-r11b
 export ANDROIDAPI=14
 export ANDROIDNDKVER=r11b
+export PATH=/usr/local/bin:/usr/bin:/bin
 
 
 python ../python-for-android/pythonforandroid/toolchain.py create \
@@ -39,7 +43,7 @@ python ../python-for-android/pythonforandroid/toolchain.py create \
 
 python ../python-for-android/pythonforandroid/toolchain.py apk \
 --dist_name=webview.xxnet.android \
- --package xxnet.net --name XX-Net --version 3.1.0 \
+ --package xxnet.net --name XX-Net --version 3.6.0 \
 --private private \
  --permission ACCESS_NETWORK_STATE \
  --permission INTERNET \
@@ -48,3 +52,10 @@ python ../python-for-android/pythonforandroid/toolchain.py apk \
 --icon default_code/code/default/launcher/web_ui/img/logo.png \
 --presplash default_code/code/default/launcher/web_ui/img/logo.png \
  --port=8085
+
+/media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb install -r XX-Net-3.6.0-debug.apk
+
+# run apk
+/media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb shell \
+am start -n xxnet.net/org.kivy.android.PythonActivity
+

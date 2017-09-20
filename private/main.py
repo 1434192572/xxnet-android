@@ -37,15 +37,31 @@ def load_xxnet():
 
     xxnet_path = os.path.join(sdcard_path, "XX-Net")
     print "load_xxnet on:", xxnet_path
-    if not os.path.exists(xxnet_path):
-        os.mkdir(xxnet_path)
 
-    launcher_path = os.path.join(xxnet_path, "code", "default", "launcher")
-    if not os.path.exists(launcher_path):
-        default_zip = os.path.join(current_path, "default.zip")
+    default_zip = os.path.join(current_path, "default.zip")
+    if not os.path.exists(xxnet_path) or \
+        os.path.getmtime(xxnet_path) < os.path.getmtime(default_zip):
+        if not os.path.exists(xxnet_path):
+            os.mkdir(xxnet_path)
+        os.utime(xxnet_path, None) # touch the dir mtime.
+
+        print "unzip %s to %s." % (default_zip, xxnet_path)
         with zipfile.ZipFile(default_zip, "r") as dz:
             dz.extractall(xxnet_path)
 
+    version = "default"
+    version_fn = os.path.join(xxnet_path, "code", "version.txt")
+    if os.path.exists(version_fn):
+        with open(version_fn, "rt") as fd:
+            version = fd.readline()
+
+    if not os.path.exists(os.path.join(xxnet_path, "code", version, "launcher")):
+        print "version %s not exist, use default." % version
+        version = "default"
+    else:
+        print "launch version:%s" % version
+
+    launcher_path = os.path.join(xxnet_path, "code", version, "launcher")
     sys.path.insert(0, launcher_path)
     from start import main as launcher_main
     print "launcher_main"
