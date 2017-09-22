@@ -11,6 +11,7 @@ sudo apt-get install python-sh python-appdirs virtualenv cython python-jinja2 pk
 git clone https://github.com/xx-net/XX-Net.git
 
 # pack default xx-net python code to private path
+rm -rf default_code
 mkdir -p default_code/code/default
 cp -r XX-Net/code/default/gae_proxy XX-Net/code/default/launcher \
  XX-Net/code/default/x_tunnel XX-Net/code/default/version.txt\
@@ -43,7 +44,7 @@ python ../python-for-android/pythonforandroid/toolchain.py create \
 
 python ../python-for-android/pythonforandroid/toolchain.py apk \
 --dist_name=webview.xxnet.android \
- --package xxnet.net --name XX-Net --version 3.6.0 \
+ --package xxnet.net --name XX-Net --version 3.6.1 \
 --private private \
  --permission ACCESS_NETWORK_STATE \
  --permission INTERNET \
@@ -53,9 +54,10 @@ python ../python-for-android/pythonforandroid/toolchain.py apk \
 --presplash default_code/code/default/launcher/web_ui/img/logo.png \
  --port=8085
 
-/media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb install -r XX-Net-3.6.0-debug.apk
+/media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb install -r XX-Net-3.6.1-debug.apk
 
 # run apk
 /media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb shell \
 am start -n xxnet.net/org.kivy.android.PythonActivity
 
+/media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb logcat | grep python
