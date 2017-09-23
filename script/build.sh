@@ -10,6 +10,14 @@ sudo apt-get install python-sh python-appdirs virtualenv cython python-jinja2 pk
 
 git clone https://github.com/xx-net/XX-Net.git
 
+
+export ANDROIDSDK=~/android-sdk-linux
+export ANDROIDNDK=~/android-ndk-r11b
+export ANDROIDAPI=14
+export ANDROIDNDKVER=r11b
+export PATH=/usr/local/bin:/usr/bin:/bin
+
+
 # pack default xx-net python code to private path
 rm -rf default_code
 mkdir -p default_code/code/default
@@ -30,21 +38,20 @@ zip -r ../private/default.zip *
 cd ..
 
 
-export ANDROIDSDK=~/android-sdk-linux
-export ANDROIDNDK=~/android-ndk-r11b
-export ANDROIDAPI=14
-export ANDROIDNDKVER=r11b
-export PATH=/usr/local/bin:/usr/bin:/bin
-
 
 python ../python-for-android/pythonforandroid/toolchain.py create \
 --dist_name=webview.xxnet.android --bootstrap=webview \
 --requirements=python2,openssl,pyopenssl,cryptography,pyjnius,cffi
 
+cp ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libssl1.0.2h.so \
+ ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libssl.so
+cp ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libcrypto1.0.2h.so\
+ ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libcrypto.so
+
 
 python ../python-for-android/pythonforandroid/toolchain.py apk \
 --dist_name=webview.xxnet.android \
- --package xxnet.net --name XX-Net --version 3.6.1 \
+ --package xxnet.net --name XX-Net --version 3.6.2 \
 --private private \
  --permission ACCESS_NETWORK_STATE \
  --permission INTERNET \
@@ -54,7 +61,7 @@ python ../python-for-android/pythonforandroid/toolchain.py apk \
 --presplash default_code/code/default/launcher/web_ui/img/logo.png \
  --port=8085
 
-/media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb install -r XX-Net-3.6.1-debug.apk
+/media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb install -r XX-Net-3.6.2-debug.apk
 
 # run apk
 /media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb shell \
