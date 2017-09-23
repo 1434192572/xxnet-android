@@ -36,6 +36,7 @@ def load_xxnet():
         return
 
     xxnet_path = os.path.join(sdcard_path, "XX-Net")
+    version_fn = os.path.join(xxnet_path, "code", "version.txt")
     print "load_xxnet on:", xxnet_path
 
     default_zip = os.path.join(current_path, "default.zip")
@@ -49,8 +50,10 @@ def load_xxnet():
         with zipfile.ZipFile(default_zip, "r") as dz:
             dz.extractall(xxnet_path)
 
+        if os.path.exists(version_fn):
+            os.remove(version_fn)
+
     version = "default"
-    version_fn = os.path.join(xxnet_path, "code", "version.txt")
     if os.path.exists(version_fn):
         with open(version_fn, "rt") as fd:
             version = fd.readline()

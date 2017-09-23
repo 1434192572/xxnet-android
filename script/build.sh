@@ -18,6 +18,18 @@ export ANDROIDNDKVER=r11b
 export PATH=/usr/local/bin:/usr/bin:/bin
 
 
+# prepair the python-for-android env
+python ../python-for-android/pythonforandroid/toolchain.py create \
+--dist_name=webview.xxnet.android --bootstrap=webview \
+--requirements=python2,openssl,pyopenssl,cryptography,pyjnius,cffi
+# patch for Android 7
+cp ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libssl1.0.2h.so \
+ ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libssl.so
+cp ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libcrypto1.0.2h.so\
+ ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libcrypto.so
+
+
+
 # pack default xx-net python code to private path
 rm -rf default_code
 mkdir -p default_code/code/default
@@ -38,17 +50,7 @@ zip -r ../private/default.zip *
 cd ..
 
 
-
-python ../python-for-android/pythonforandroid/toolchain.py create \
---dist_name=webview.xxnet.android --bootstrap=webview \
---requirements=python2,openssl,pyopenssl,cryptography,pyjnius,cffi
-
-cp ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libssl1.0.2h.so \
- ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libssl.so
-cp ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libcrypto1.0.2h.so\
- ~/.local/share/python-for-android/dists/webview.xxnet.android/libs/armeabi/libcrypto.so
-
-
+# build apk
 python ../python-for-android/pythonforandroid/toolchain.py apk \
 --dist_name=webview.xxnet.android \
  --package xxnet.net --name XX-Net --version 3.6.2 \
@@ -61,10 +63,12 @@ python ../python-for-android/pythonforandroid/toolchain.py apk \
 --presplash default_code/code/default/launcher/web_ui/img/logo.png \
  --port=8085
 
+# install apk to device
 /media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb install -r XX-Net-3.6.2-debug.apk
 
 # run apk
 /media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb shell \
 am start -n xxnet.net/org.kivy.android.PythonActivity
 
+# show android log
 /media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb logcat | grep python
