@@ -53,7 +53,7 @@ cd ..
 # build apk
 python ../python-for-android/pythonforandroid/toolchain.py apk \
 --dist_name=webview.xxnet.android \
- --package xxnet.net --name XX-Net --version 3.6.2 \
+ --package xxnet.net --name XX-Net --version 3.6.3 \
 --private private \
  --permission ACCESS_NETWORK_STATE \
  --permission INTERNET \
@@ -64,7 +64,7 @@ python ../python-for-android/pythonforandroid/toolchain.py apk \
  --port=8085
 
 # install apk to device
-/media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb install -r XX-Net-3.6.2-debug.apk
+/media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb install -r XX-Net-3.6.3-debug.apk
 
 # run apk
 /media/dev/android-xxnet/android_sdk/android-sdk-linux/platform-tools/adb shell \
